@@ -1,0 +1,181 @@
+{
+    "brand": "Parc de Madagascar",
+    "home": "Accueil",
+    "returnHome": "Retour à l'accueil",
+    "park": "Les parcs",
+    "gallery": "Galeries",
+    "offer": "Offre",
+    "the": "Les",
+    "mostPopular": "parcs les plus populaires de Madagascar",
+    "stats": "Statistiques des espèces",
+    "parcNational": "Parc national",
+    "contact": "Contact",
+    "welcomeTitle": "Explorez les parcs de Madagascar",
+    "discover": "Découvrir",
+    "language": "Langue",
+    "hero-desc": "Un voyage inoubliable à travers les trésors naturels de Madagascar.",
+    "login": "Se connecter",
+    "logout": "Se déconnecter",
+    "logoutSuccess": "Vous vous êtes déconnecté avec succès.",
+    "loginSuccess": "Vous vous êtes connecté avec succès.",
+    "register": "S'inscrire",
+    "forgotPassword": "Mot de passe oublié?",
+    "haveAccount": "Vous avez déjà un compte?",
+    "haveNotAccount": "Vous n'avez pas de compte?",
+    "acceptTerms": "J'accepte les termes et conditions",
+    "guestAccount": "ou Compte invité",
+    "settings": "Paramètres",
+    "seeDestination": "Liste des destinations",
+    "seeAllParcs": "ou Voir tous les parcs",
+    "seeWebsite": "Voir le site",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "parkNumber": "Numéro {{index}} / {{total}}",
+    "userList": "Liste des utilisateurs",
+    "name": "Nom",
+    "manageContent": "Gestion du contenu",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "add": "Ajouter",
+    "deleteConfirmation": "Etes-vous sur de vouloir supprimer ce utilisateur?",
+    "deleteSuccess": "Utilisateur supprimé avec succès.",
+    "parks": {
+        "1": {
+            "title": "Parc National d'Andasibe-Mantadia",
+            "description": "Situé à environ 140 km à l'est d'Antananarivo, Andasibe-Mantadia est l’un des parcs nationaux les plus célèbres de Madagascar. Il comprend le parc de Mantadia et la réserve spéciale d’Analamazaotra.",
+            "fauna": "Faune unique : abrite le plus grand lémurien, l’Indri-Indri.",
+            "flora": "Flore luxuriante : forêts tropicales humides riches en orchidées et fougères.",
+            "activities": "Activités : randonnées, observation nocturne de la faune, visites de villages.",
+            "access": "Accès : environ 3 heures de route depuis Antananarivo.",
+            "bestTime": "Période idéale : d'avril à octobre (saison sèche)."
+        },
+        "2": {
+            "title": "Parc National de l'Isalo",
+            "description": "Situé dans le sud-ouest de Madagascar, l’Isalo est célèbre pour ses canyons spectaculaires, ses plateaux rocheux, ses piscines naturelles et ses formations de grès façonnées par le vent et le temps.",
+            "fauna": "Faune : lémuriens, caméléons, oiseaux endémiques.",
+            "flora": "Paysages : canyons, grottes, falaises et piscines naturelles.",
+            "activities": "Activités : randonnées, baignade dans les piscines naturelles, exploration des formations rocheuses.",
+            "access": "Accès : près de Ranohira, accessible depuis Toliara ou Fianarantsoa.",
+            "bestTime": "Période idéale : d'avril à octobre."
+        },
+        "3": {
+            "title": "Parc National de Ranomafana",
+            "description": "Niché dans les hauts plateaux de l’est, Ranomafana est un joyau de biodiversité avec sa forêt tropicale dense, ses sources chaudes et ses nombreuses espèces endémiques.",
+            "fauna": "Faune : 12 espèces de lémuriens, grenouilles rares, caméléons, oiseaux.",
+            "flora": "Flore : forêt humide avec fougères arborescentes, orchidées, bambous géants.",
+            "activities": "Activités : écotourisme, balades nocturnes, bains dans les sources chaudes.",
+            "access": "Accès : à environ 60 km de Fianarantsoa.",
+            "bestTime": "Période idéale : de mai à octobre."
+        },
+        "4": {
+            "title": "Parc National des Tsingy de Bemaraha",
+            "description": "Site du patrimoine mondial de l’UNESCO situé dans l’ouest de Madagascar, célèbre pour ses formations karstiques spectaculaires appelées « tsingy » – véritables forêts de pierre uniques.",
+            "fauna": "Faune : lémuriens, chauves-souris, reptiles rares, oiseaux endémiques.",
+            "flora": "Formations : pics calcaires acérés, ponts suspendus, grottes.",
+            "activities": "Activités : escalade, via ferrata, spéléologie, randonnée dans les tsingy.",
+            "access": "Accès : difficile, généralement via Morondava et Bekopaka (route et pirogue).",
+            "bestTime": "Période idéale : de juin à novembre (fermé en saison des pluies)."
+        }
+    },
+    "visit": "Visiter le parc",
+    "galleries": {
+        "title": "À découvrir :",
+        "description": "Découvrez les espèces animales et végétales les plus emblématiques de Madagascar. Entre faune endémique et flore spectaculaire, plongez dans un écosystème unique au monde, façonné par des millions d’années d’évolution isolée.",
+        "items": [
+            {
+                "title": "Lémurien",
+                "desc": "Primates endémiques de Madagascar, symboles emblématiques de l’île, connus pour leur comportement social et leurs grands yeux expressifs."
+            },
+            {
+                "title": "Fossa",
+                "desc": "Principal prédateur de Madagascar, le fossa est un carnivore agile, semblable à un félin, chassant aussi bien au sol que dans les arbres."
+            },
+            {
+                "title": "Martin-pêcheur malgache",
+                "desc": "Petit oiseau forestier aux teintes orangées éclatantes, endémique de Madagascar, souvent observé dans les forêts humides de l’Est."
+            },
+            {
+                "title": "Caméléon panthère",
+                "desc": "Reptile arboricole aux couleurs vives et changeantes, le caméléon panthère est l’un des plus colorés de son espèce, vivant principalement dans les forêts de l’Est et du Nord de Madagascar."
+            },
+            {
+                "title": "Ravinala",
+                "desc": "Symbole national de Madagascar, le Ravinala est reconnaissable à ses feuilles en éventail et sa capacité à stocker de l’eau."
+            },
+            {
+                "title": "Baobab",
+                "desc": "Arbre majestueux et sacré, endémique de Madagascar, célèbre pour son tronc massif."
+            }
+        ],
+        "consult": "Consulter",
+        "seeMore": "Voir plus"
+    },
+    "offers": {
+        "title": "Nos offres exclusives",
+        "disclaimer": "Les prix indiqués ne comprennent pas les frais de déplacement.",
+        "discoverPass": {
+            "name": "Pass Découverte",
+            "price": "10€",
+            "unit": "/ jour",
+            "features": [
+                "Accès à 1 parc",
+                "Valable 1 jour",
+                "Pour visiteurs ponctuels"
+            ]
+        },
+        "familyPass": {
+            "name": "Pass Famille",
+            "badge": "Idéal en famille",
+            "price": "35€",
+            "unit": "/ jour",
+            "features": [
+                "2 adultes + 2 enfants",
+                "Accès 1 parc",
+                "Activités familiales incluses"
+            ]
+        },
+        "nationalPass": {
+            "name": "Pass National",
+            "price": "90€",
+            "unit": "/ an",
+            "features": [
+                "Accès illimité à tous les parcs",
+                "Valable 12 mois",
+                "Idéal pour passionnés & chercheurs"
+            ]
+        },
+        "cta": "Obtenir l'offre"
+    },
+    "contacts": {
+        "needQuestion": "Besoin de question?",
+        "questionMessage": "Une question, une visite à organiser ou un conseil pour votre séjour ? L’équipe du parc est à votre écoute.",
+        "yourAccount": "Votre compte",
+        "yourAccountSettings": "Modifier votre compte",
+        "yourName": "Votre nom",
+        "yourEmail": "Votre adresse e-mail",
+        "yourPassword": "Votre mot de passe",
+        "yourConfirmPassword": "Confirmer votre mot de passe",
+        "yourMessage": "Votre message",
+        "sendMessage": "Envoyer le message"
+    },
+    "footer": {
+        "aboutTitle": "À propos du Parc",
+        "aboutDescription": "Le Parc National de Madagascar regroupe des écosystèmes exceptionnels, une biodiversité unique au monde et des paysages naturels préservés. Il joue un rôle essentiel dans la conservation des espèces et la sensibilisation à l’environnement.",
+        "navigationTitle": "Navigation",
+        "home": "Accueil",
+        "parks": "Les parcs",
+        "gallery": "Galeries",
+        "stats": "Statistiques",
+        "contact": "Contact",
+        "contactTitle": "Contactez-nous",
+        "contactDescription": "Pour toute question, suggestion ou demande d'information, n'hésitez pas à nous contacter. Notre équipe est là pour vous aider.",
+        "email": "Email",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "addressDetails": "Parc National de Madagascar, Antananarivo, Madagascar",
+        "followUs": "Suivez-nous",
+        "copyright": "Parc National de Madagascar. Tous droits réservés."
+    }
+}
