@@ -107,24 +107,23 @@ function Gallery({ theme }) {
                                     >
                                         <h5 className="fw-bold">{title}</h5>
                                         <p>{desc}</p>
-                                        <motion.button
-                                            whileHover={{ scale: 1.1 }}
+                                        {/* <motion.button
                                             whileTap={{ scale: 0.9 }}
                                             className="btn btn-main"
                                         >
                                             {t('galleries.consult')} <i className="bi bi-plus-circle-fill"></i>
-                                        </motion.button>
+                                        </motion.button> */}
                                     </motion.div>
                                 </motion.div>
                             ))}
                         </div>
                     ))}
                 </div>
-                <div className="w-100 text-center mt-4">
+                {/* <div className="w-100 text-center mt-4">
                     <button className='btn btn-main'>
                         {t('galleries.seeMore')} <i className="bi bi-three-dots ms-3"></i>
                     </button>
-                </div>
+                </div> */}
             </div>
         </>
     )

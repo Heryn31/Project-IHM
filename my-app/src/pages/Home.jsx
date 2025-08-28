@@ -8,6 +8,7 @@ import Stats from '../components/Stats';
 import Parcs from '../components/Parcs';
 import Offer from '../components/Offer';
 import BestParks from '../components/BestParks';
+import Actu from '../components/Actu';
 
 
 import { toast, ToastContainer } from 'react-toastify';
@@ -38,13 +39,15 @@ function Home() {
     };
 
     return (
-        <>
+        <div>
             <Navbar theme={theme} toggleTheme={toggleTheme} showCenter />
             <section id="accueil"><Hero theme={theme} /></section>
             {/* <section id="parcs"><Parcs theme={theme} /></section> */}
             <section id="parcs"><BestParks theme={theme} /></section>
             <section id="gallery"><Gallery theme={theme} /></section>
+            <section id="stats"><Stats theme={theme} /></section>
             <section id="offer"><Offer theme={theme} /></section>
+            {/* <section id="actu"><Actu theme={theme} /></section> */}
             <section id="contact"><Contact theme={theme} /></section>
             <Footer theme={theme} />
             {/* Conteneur des notifications */}
@@ -60,7 +63,7 @@ function Home() {
                 pauseOnHover
                 theme="colored"
             />
-        </>
+        </div>
     );
 }
 

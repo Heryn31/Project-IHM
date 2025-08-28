@@ -21,6 +21,9 @@ import Sign from './pages/Auth/sign';
 import Home from './pages/Home';
 import Parks from './pages/Parks/parks';
 import AdminUserPage from './pages/Admin/AdminUserPage';
+import Message from './pages/Admin/Message';
+import P404 from './components/P404';
+import Manage from './pages/Admin/Content/Manage';
 
 function App() {
 
@@ -34,11 +37,13 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sign" element={<Sign />} />
           <Route path="/account" element={<div>Account Page</div>} />
-          <Route path="/parks" element={<Parks />} />
+          <Route path="/admin/parks" element={<Parks />} />
           <Route path="/admin" element={<AdminUserPage />} />
+          <Route path="/admin/manage" element={<Manage />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="*" element={<P404 />} />
         </Routes>
       </Router>
-
     </>
   )
 }

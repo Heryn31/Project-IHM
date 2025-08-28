@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 
 import React from 'react';
 
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from 'react-i18next';   
 
 import { motion } from 'framer-motion';
 import andasibe from '../assets/images/andasibe.jpeg';
@@ -26,7 +25,7 @@ function Parcs({ theme }) {
     const [selectedPark, setSelectedPark] = useState(null);
     const [cartHover, setCartHover] = useState(false);
     const [bookmarkHover, setBookmarkHover] = useState(false);
-
+ 
     const openModal = (park) => {
         setSelectedPark(park);
         setModalOpen(true);
@@ -228,7 +227,6 @@ function Parcs({ theme }) {
                 </div>
             )}
         </div>
-
     );
 }
 

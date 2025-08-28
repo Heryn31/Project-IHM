@@ -1,29 +1,35 @@
-import React from 'react'
-import maps from '../assets/images/maps.png'
+import React from "react";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
-function Presentation() {
-    return (
-        <>
-            <div className="bg-white py-5 pt-5">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8 text-center">
-                            <h2 className="fw-bold text-dark mb-3">Localisation: </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section className="present-section mb-5">
-                <div className="container">
-                    <div className="column align-items-center">
-                        <div>
-                            <img src={maps} alt="Hero Image" loading='lazy' className="img-fluid maps-image" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    )
-}
+// Conteneur de la carte
+const containerStyle = {
+  width: "100%",
+  height: "400px"
+};
 
-export default Presentation
+// Position du lieu
+const center = {
+  lat: -18.8792, // exemple : Antananarivo
+  lng: 47.5079
+};
+
+const MapComponent = () => {
+  // Chargement de l'API Google Maps
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: "VOTRE_CLE_API_ICI" // Remplace par ta clé API
+  });
+
+  if (!isLoaded) return <div>Chargement de la carte...</div>;
+
+  return (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={15}
+    >
+      <Marker position={center} /> {/* Marker interactif */}
+    </GoogleMap>
+  );
+};
+
+export default React.memo(MapComponent);

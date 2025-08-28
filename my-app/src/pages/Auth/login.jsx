@@ -73,7 +73,7 @@ function Login() {
             />
           </motion.div>
 
-          <div className="col-sm-6 d-flex flex-column justify-content-center text-black">
+          <div className="col-sm-6 d-flex flex-column justify-content-center align-items-center text-center text-black">
 
             <motion.a
               initial={{ opacity: 0 }}

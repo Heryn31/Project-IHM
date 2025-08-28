@@ -102,7 +102,7 @@ function Sign() {
                             />
                         </div>
 
-                        <div className="col-sm-6 d-flex flex-column justify-content-center text-black">
+                        <div className="col-sm-6 d-flex flex-column justify-content-center align-items-center text-center text-black">
 
                             <motion.a
                                 initial={{ opacity: 0 }}
@@ -122,7 +122,9 @@ function Sign() {
                                             initial={{ y: '20px', opacity: 0 }}
                                             animate={{ y: 0, opacity: 1 }}
                                             transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
-                                            className="h1 fs-1 fw-bold mb-0 text-decoration-none">
+                                            className="h1 fw-bold mb-0 text-decoration-none"
+                                            style={{ fontSize: '3.5rem' }}
+                                            >
                                             {t('register')}
                                         </motion.h3>
                                     </div>

@@ -4,11 +4,18 @@ const cors = require("cors");
 // const loginRoute = require('./routes/auth');
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
+const Parser = require("rss-parser");
 
 const { v4: uuidv4 } = require('uuid');
 
 
 const app = express();
+const parser = new Parser({
+  headers: { 'User-Agent': 'Mozilla/5.0 (compatible; MyApp/1.0)' }
+});
+const RSS_URL = "https://rss.app/feeds/d87BSTmLJTcl8oUi.xml";
+const DEFAULT_THEME = "parc";
+
 
 app.use(cors({
   origin: 'http://localhost:5173', // l'URL frontend
@@ -47,11 +54,132 @@ const UserSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user'
   }
-  // autres champs...
 });
 
 const User = mongoose.models.User || mongoose.model('User', UserSchema);
 
+// Schéma Price
+const PriceSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['Decouverte', 'Famille', 'Nationale'],
+    required: true
+  },
+  amount: {
+    type: Number,
+    required: true
+  },
+  currency: {
+    type: String,
+    default: 'EUR' // ou MGA, USD selon ton besoin
+  }
+});
+
+// Ampisaina rehefa mampiasa ORM 
+const Price = mongoose.model('Price', PriceSchema);
+
+// Schéma Park
+const ParkSchema = new mongoose.Schema(
+  {
+    num: { type: Number, required: true, unique: true },
+    title: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    description: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    fauna: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    flora: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    activities: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    access: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+    bestTime: {
+      fr: { type: String, required: true },
+      en: { type: String, default: "" },
+    },
+  },
+  { timestamps: true, strict: true }
+);
+
+
+// Ampiasaina rehefa mampiasa ORM
+const Park = mongoose.model('Park', ParkSchema);
+
+//Schema Image
+const ImageSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+// XD
+const Image = mongoose.model('Image', ImageSchema);
+
+//Messages schema
+const messageSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
+  read: {
+    type: Boolean,
+    default: false
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const Message = mongoose.model('Message',  messageSchema);
+
+
+// Exemple d'insertion de prix dans la base de données
+// (à commenter après la première exécution pour éviter les doublons)
+// await Price.deleteMany({}); //Mamafa ny donnees an'ny Price raha ilaina
+// const newPrice = new Price({
+//   type: 'Decouverte',
+//   amount: 100000,
+//   currency: 'MGA'
+// });
+
+// Sauvegarde dans MongoDB
+// await newPrice.save();
+
+// console.log("Prix inséré :", newPrice);
 
 
 // Mot de passe de test de Alice 
@@ -199,6 +327,170 @@ app.get('/api/logout', async (req, res) => {
     res.clearCookie('connect.sid'); // Nettoie le cookie de session
     res.json({ message: 'Déconnecté' });
   });
+});
+
+// Route des recuperation des donnees via RSS parser
+app.get("/api/articles", async (req, res) => {
+  try {
+    const feed = await parser.parseURL(RSS_URL);
+
+    let articles = feed.items.map(item => ({
+      title: item.title,
+      link: item.link,
+      date: item.pubDate,
+      description: item.contentSnippet,
+      image: extractImageFromContent(item.content)
+    }));
+
+    // articles = articles.filter(a =>
+    //   a.title.toLowerCase().includes(DEFAULT_THEME) ||
+    //   a.description.toLowerCase().includes(DEFAULT_THEME)
+    // );
+
+    res.json(articles);
+  } catch (error) {
+    console.error("Erreur RSS:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+function extractImageFromContent(content) {
+  const match = content?.match(/<img.*?src="(.*?)"/);
+  return match ? match[1] : null;
+}
+
+// Route pour récupérer les prix
+app.get("/api/prices", async (req, res) => {
+  try {
+    const prices = await Price.find();
+    res.json(prices);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des prix:", error);
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+});
+
+// Route pour Modifier les prix par son nom
+
+app.put("/api/prices/:type", async (req, res) => {
+  try {
+    const { type } = req.params;           // ex: Decouverte
+    const { amount, currency } = req.body; // valeurs à modifier
+
+    const updatedPrice = await Price.findOneAndUpdate(
+      { type },                            // critère de recherche
+      { amount, currency },                // champs à mettre à jour
+      { new: true }                        // retourne le document modifié
+    );
+
+    if (!updatedPrice) {
+      return res.status(404).json({ message: `Prix '${type}' non trouvé.` });
+    }
+
+    res.json(updatedPrice);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// =====================
+// 🔹 READ (GET)
+// =====================
+
+app.get("/api/parks", async (req, res) => {
+  try {
+    const parks = await Park.find();
+    res.json(parks);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des parks:", error);
+    res.status(500).json({ message: "Erreur serveur" });
+  }
+});
+
+// =====================
+// 🔹 CREATE (POST)
+// =====================
+app.post("/api/parks", async (req, res) => {
+  try {
+    const park = new Park(req.body);
+    await park.save();
+    res.status(201).json(park);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// =====================
+// 🔹 UPDATE (PUT ou PATCH)
+// =====================
+app.put("/api/parks/:id", async (req, res) => {
+  try {
+    const park = await Park.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+    if (!park) return res.status(404).json({ error: "Parc non trouvé" });
+    res.json(park);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// =====================
+// 🔹 DELETE
+// =====================
+app.delete("/api/parks/:id", async (req, res) => {
+  try {
+    const park = await Park.findByIdAndDelete(req.params.id);
+    if (!park) return res.status(404).json({ error: "Parc non trouvé" });
+    res.json({ message: "Parc supprimé avec succès" });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+//Messages routes
+
+app.post('/api/messages', async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    
+    const newMessage = new Message({
+      name,
+      email,
+      message
+    });
+
+    await newMessage.save();
+    res.status(201).json({ message: 'Message envoyé avec succès' });
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de l\'envoi du message' });
+  }
+});
+
+// Récupérer tous les messages (pour l'admin)
+app.get('/api/messages', async (req, res) => {
+  try {
+    const messages = await Message.find().sort({ createdAt: -1 });
+    res.json(messages);
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de la récupération des messages' });
+  }
+});
+
+// Marquer un message comme lu
+app.put('/api/messages/:id/read', async (req, res) => {
+  try {
+    const message = await Message.findByIdAndUpdate(
+      req.params.id,
+      { read: true },
+      { new: true }
+    );
+    res.json(message);
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de la mise à jour du message' });
+  }
 });
 
 

@@ -28,7 +28,7 @@
   "guestAccount": "or Guest account",
   "settings": "Settings",
   "seeDestination": "List of destinations",
-  "seeAllParcs": "or See all parks",
+  "seeAllParcs": "See all parks",
   "seeWebsite": "See Website",
   "previous": "Previous",
   "next": "Next",
@@ -47,38 +47,38 @@
     "1": {
       "title": "Andasibe-Mantadia National Park",
       "description": "Located about 140 km east of Antananarivo, Andasibe-Mantadia is one of Madagascar’s most famous national parks. It includes Mantadia Park and the Analamazaotra Special Reserve.",
-      "fauna": "Unique wildlife: home to the largest lemur, the Indri-Indri.",
-      "flora": "Lush flora: humid tropical rainforests rich in orchids and ferns.",
-      "activities": "Activities: hiking, nocturnal wildlife watching, village visits.",
-      "access": "Access: around 3 hours drive from Antananarivo.",
-      "bestTime": "Best time: April to October (dry season)."
+      "fauna": "home to the largest lemur, the Indri-Indri.",
+      "flora": "humid tropical rainforests rich in orchids and ferns.",
+      "activities": "hiking, nocturnal wildlife watching, village visits.",
+      "access": "around 3 hours drive from Antananarivo.",
+      "bestTime": "April to October (dry season)."
     },
     "2": {
       "title": "Isalo National Park",
       "description": "Located in southwestern Madagascar, Isalo is famous for its dramatic canyons, rocky plateaus, natural pools, and sandstone formations shaped by wind and time.",
       "fauna": "Wildlife: lemurs, chameleons, endemic birds.",
       "flora": "Landscapes: canyons, caves, cliffs, and natural pools.",
-      "activities": "Activities: hiking, swimming in natural pools, exploring rock formations.",
-      "access": "Access: near Ranohira, reachable from Toliara or Fianarantsoa.",
-      "bestTime": "Best time: April to October."
+      "activities": "hiking, swimming in natural pools, exploring rock formations.",
+      "access": "near Ranohira, reachable from Toliara or Fianarantsoa.",
+      "bestTime": "April to October."
     },
     "3": {
       "title": "Ranomafana National Park",
       "description": "Nestled in the eastern highlands, Ranomafana is a biodiversity jewel with dense rainforest, hot springs, and many endemic species.",
       "fauna": "Wildlife: 12 species of lemurs, rare frogs, chameleons, birds.",
       "flora": "Flora: humid rainforest with tree ferns, orchids, giant bamboos.",
-      "activities": "Activities: ecotourism, night walks, hot spring bathing.",
-      "access": "Access: about 60 km from Fianarantsoa.",
-      "bestTime": "Best time: May to October."
+      "activities": "ecotourism, night walks, hot spring bathing.",
+      "access": "about 60 km from Fianarantsoa.",
+      "bestTime": "May to October."
     },
     "4": {
       "title": "Tsingy de Bemaraha National Park",
       "description": "A UNESCO World Heritage Site in western Madagascar, famous for its dramatic karst formations known as 'tsingy' – unique stone forests.",
       "fauna": "Wildlife: lemurs, bats, rare reptiles, endemic birds.",
       "flora": "Formations: sharp limestone peaks, hanging bridges, caves.",
-      "activities": "Activities: climbing, via ferrata, cave exploration, tsingy hiking.",
-      "access": "Access: challenging, usually via Morondava and Bekopaka (road and pirogue).",
-      "bestTime": "Best time: June to November (closed in rainy season)."
+      "activities": "climbing, via ferrata, cave exploration, tsingy hiking.",
+      "access": "challenging, usually via Morondava and Bekopaka (road and pirogue).",
+      "bestTime": "June to November (closed in rainy season)."
     }
   },
   "visit": "Visit the park",
@@ -160,7 +160,9 @@
     "yourPassword": "Your password",
     "yourConfirmPassword": "Confirm your password",
     "yourMessage": "Your message",
-    "sendMessage": "Send the message"
+    "sendMessage": "Send the message",
+    "messageSent": "Your message has been sent successfully! We will get back to you as soon as possible.",
+    "messageError": "An error occurred while sending your message: {{error}}"
   },
   "footer": {
     "aboutTitle": "About the Park",

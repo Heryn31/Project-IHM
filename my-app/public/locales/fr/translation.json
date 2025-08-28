@@ -26,7 +26,7 @@
     "guestAccount": "ou Compte invité",
     "settings": "Paramètres",
     "seeDestination": "Liste des destinations",
-    "seeAllParcs": "ou Voir tous les parcs",
+    "seeAllParcs": "Voir tous les parcs",
     "seeWebsite": "Voir le site",
     "previous": "Précédent",
     "next": "Suivant",
@@ -45,38 +45,38 @@
         "1": {
             "title": "Parc National d'Andasibe-Mantadia",
             "description": "Situé à environ 140 km à l'est d'Antananarivo, Andasibe-Mantadia est l’un des parcs nationaux les plus célèbres de Madagascar. Il comprend le parc de Mantadia et la réserve spéciale d’Analamazaotra.",
-            "fauna": "Faune unique : abrite le plus grand lémurien, l’Indri-Indri.",
-            "flora": "Flore luxuriante : forêts tropicales humides riches en orchidées et fougères.",
-            "activities": "Activités : randonnées, observation nocturne de la faune, visites de villages.",
-            "access": "Accès : environ 3 heures de route depuis Antananarivo.",
-            "bestTime": "Période idéale : d'avril à octobre (saison sèche)."
+            "fauna": "abrite le plus grand lémurien, l’Indri-Indri.",
+            "flora": "forêts tropicales humides riches en orchidées et fougères.",
+            "activities": "randonnées, observation nocturne de la faune, visites de villages.",
+            "access": "environ 3 heures de route depuis Antananarivo.",
+            "bestTime": "d'avril à octobre (saison sèche)."
         },
         "2": {
             "title": "Parc National de l'Isalo",
             "description": "Situé dans le sud-ouest de Madagascar, l’Isalo est célèbre pour ses canyons spectaculaires, ses plateaux rocheux, ses piscines naturelles et ses formations de grès façonnées par le vent et le temps.",
-            "fauna": "Faune : lémuriens, caméléons, oiseaux endémiques.",
-            "flora": "Paysages : canyons, grottes, falaises et piscines naturelles.",
-            "activities": "Activités : randonnées, baignade dans les piscines naturelles, exploration des formations rocheuses.",
-            "access": "Accès : près de Ranohira, accessible depuis Toliara ou Fianarantsoa.",
-            "bestTime": "Période idéale : d'avril à octobre."
+            "fauna": "lémuriens, caméléons, oiseaux endémiques.",
+            "flora": "canyons, grottes, falaises et piscines naturelles.",
+            "activities": "randonnées, baignade dans les piscines naturelles, exploration des formations rocheuses.",
+            "access": "près de Ranohira, accessible depuis Toliara ou Fianarantsoa.",
+            "bestTime": "d'avril à octobre."
         },
         "3": {
             "title": "Parc National de Ranomafana",
             "description": "Niché dans les hauts plateaux de l’est, Ranomafana est un joyau de biodiversité avec sa forêt tropicale dense, ses sources chaudes et ses nombreuses espèces endémiques.",
-            "fauna": "Faune : 12 espèces de lémuriens, grenouilles rares, caméléons, oiseaux.",
-            "flora": "Flore : forêt humide avec fougères arborescentes, orchidées, bambous géants.",
-            "activities": "Activités : écotourisme, balades nocturnes, bains dans les sources chaudes.",
-            "access": "Accès : à environ 60 km de Fianarantsoa.",
-            "bestTime": "Période idéale : de mai à octobre."
+            "fauna": "12 espèces de lémuriens, grenouilles rares, caméléons, oiseaux.",
+            "flora": "forêt humide avec fougères arborescentes, orchidées, bambous géants.",
+            "activities": "écotourisme, balades nocturnes, bains dans les sources chaudes.",
+            "access": "à environ 60 km de Fianarantsoa.",
+            "bestTime": "de mai à octobre."
         },
         "4": {
             "title": "Parc National des Tsingy de Bemaraha",
             "description": "Site du patrimoine mondial de l’UNESCO situé dans l’ouest de Madagascar, célèbre pour ses formations karstiques spectaculaires appelées « tsingy » – véritables forêts de pierre uniques.",
-            "fauna": "Faune : lémuriens, chauves-souris, reptiles rares, oiseaux endémiques.",
-            "flora": "Formations : pics calcaires acérés, ponts suspendus, grottes.",
-            "activities": "Activités : escalade, via ferrata, spéléologie, randonnée dans les tsingy.",
-            "access": "Accès : difficile, généralement via Morondava et Bekopaka (route et pirogue).",
-            "bestTime": "Période idéale : de juin à novembre (fermé en saison des pluies)."
+            "fauna": "lémuriens, chauves-souris, reptiles rares, oiseaux endémiques.",
+            "flora": "pics calcaires acérés, ponts suspendus, grottes.",
+            "activities": "escalade, via ferrata, spéléologie, randonnée dans les tsingy.",
+            "access": "difficile, généralement via Morondava et Bekopaka (route et pirogue).",
+            "bestTime": "de juin à novembre (fermé en saison des pluies)."
         }
     },
     "visit": "Visiter le parc",
@@ -158,7 +158,9 @@
         "yourPassword": "Votre mot de passe",
         "yourConfirmPassword": "Confirmer votre mot de passe",
         "yourMessage": "Votre message",
-        "sendMessage": "Envoyer le message"
+        "sendMessage": "Envoyer le message",
+        "messageSent": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+        "messageError": "Une erreur est survenue lors de l'envoi de votre message : {{error}}"
     },
     "footer": {
         "aboutTitle": "À propos du Parc",

@@ -37,8 +37,7 @@ function Hero({ theme }) {
                                 transition={{ duration: 0.8, ease: 'easeOut'}}
                                 style={{
                                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                                    letterSpacing: '6px',
-                                    fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                                    fontSize: 'clamp(2.5rem, 5vw, 6rem)',
                                 }}
                             >
                                 {t('welcomeTitle')}
